@@ -9,6 +9,7 @@ License:	GPLv2+
 Group:		Development/Python 
 Release:	%{release}
 Source: http://tilloy.net/dev/pyexiv2/releases/pyexiv2-%{version}.tar.bz2
+Patch0:  python-exiv-patch-forlib64.patch
 URL:		http://tilloy.net/dev/pyexiv2/
 BuildRoot:	%_tmppath/%name-buildroot
 BuildRequires:  libexiv-devel
@@ -30,25 +31,25 @@ image metadata.
 %files
 %defattr(-,root,root,-)
 %doc ChangeLog  COPYING  README  todo
-%py_platlibdir/libpyexiv2.so
-%py_platlibdir/pyexiv2.py
+%py_platsitedir/libpyexiv2.so
+%py_platsitedir/pyexiv2.py
+
 
 %prep
 %setup -q -n pyexiv2-%{version}
+%patch0 -p0
 
 %build
 %scons
 
 %install
+
 %__rm -rf %{buildroot}
+%scons_install
 
-%__mkdir -p %{buildroot}/%py_platlibdir/
-
-#%scons DESTDIR="%{buildroot}" install
-
-#%scons_install
-%__cp  build/libpyexiv2.so %{buildroot}/%py_platlibdir/
-%__cp  src/pyexiv2.py %{buildroot}/%py_platlibdir/
 %clean
 %__rm -rf %{buildroot}
 
+%changelog
+* Sat Aug 08 2009 John Balcaen <mikala@mandriva.org>  0.1.3-1mdv2010.0
+ - initial import
