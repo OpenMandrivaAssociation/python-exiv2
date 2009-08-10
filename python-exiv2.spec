@@ -13,8 +13,8 @@ Patch0:  python-exiv-patch-forlib64.patch
 URL:		http://tilloy.net/dev/pyexiv2/
 BuildRoot:	%_tmppath/%name-buildroot
 BuildRequires:  libexiv-devel
-BuildRequires:  scons
-BuildRequires:	boost
+BuildRequires:  boost-devel
+BuildRequires:	scons
 Provides:	pyexiv2
 
 %description
