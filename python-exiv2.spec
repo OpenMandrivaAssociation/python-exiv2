@@ -49,7 +49,3 @@ image metadata.
 
 %clean
 %__rm -rf %{buildroot}
-
-%changelog
-* Sat Aug 08 2009 John Balcaen <mikala@mandriva.org>  0.1.3-1mdv2010.0
- - initial import
