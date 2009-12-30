@@ -1,6 +1,6 @@
 %define name python-exiv2
 %define version 0.1.3
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Python binding to exiv2
 Name:		%{name}
