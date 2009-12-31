@@ -1,4 +1,4 @@
-2define name python-exiv2
+%define name python-exiv2
 %define version 0.1.3
 %define release %mkrel 4
 
