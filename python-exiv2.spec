@@ -8,8 +8,9 @@ Version:	%{version}
 License:	GPLv2+
 Group:		Development/Python 
 Release:	%{release}
-Source: http://tilloy.net/dev/pyexiv2/releases/pyexiv2-%{version}.tar.bz2
-Patch0:  python-exiv-patch-forlib64.patch
+Source:		http://tilloy.net/dev/pyexiv2/releases/pyexiv2-%{version}.tar.bz2
+Patch0:		python-exiv-patch-forlib64.patch
+Patch1:		python-exiv-0.19.patch
 URL:		http://tilloy.net/dev/pyexiv2/
 BuildRoot:	%_tmppath/%name-buildroot
 BuildRequires:  libexiv-devel
@@ -38,6 +39,7 @@ image metadata.
 %prep
 %setup -q -n pyexiv2-%{version}
 %patch0 -p0
+%patch1 -p1 -b .exiv-0.19
 
 %build
 %scons
