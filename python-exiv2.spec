@@ -16,7 +16,7 @@ BuildRoot:	%_tmppath/%name-buildroot
 BuildRequires:  libexiv-devel
 BuildRequires:  boost-devel
 BuildRequires:	scons
-Provides:	pyexiv2
+Provides:	pyexiv2 = %{version}
 
 %description
 pyexiv2 is a python binding to exiv2, the C++ library for
