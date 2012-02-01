@@ -1,21 +1,16 @@
-%define name python-exiv2
-%define version 0.2.2
-%define release %mkrel 2
-
+Name:		python-exiv2
+Version:	0.3.0
+Release:	%mkrel 1
 Summary:	Python binding to exiv2
-Name:		%{name}
-Version:	%{version}
 License:	GPLv2+
-Group:		Development/Python 
-Release:	%{release}
+Group:		Development/Python
 Source:		http://tilloy.net/dev/pyexiv2/releases/pyexiv2-%{version}.tar.bz2
-Patch2:		pyexiv2-0.2.2-exiv2-0.21.patch
 Patch3:		pyexiv2-0.2.2-link.patch
 URL:		http://tilloy.net/dev/pyexiv2/
-BuildRoot:	%_tmppath/%name-buildroot
-BuildRequires:  libexiv-devel
-BuildRequires:  boost-devel
+BuildRequires:	libexiv-devel
+BuildRequires:	boost-devel
 BuildRequires:	scons
+BuildRequires:	python >= 2.7
 Provides:	pyexiv2 = %{version}
 
 %description
@@ -32,11 +27,10 @@ image metadata.
 %files
 %defattr(-,root,root,-)
 %doc todo README
-%py_platsitedir/*
+%{py_platsitedir}/*
 
 %prep
 %setup -q -n pyexiv2-%{version}
-%patch2 -p0
 %patch3 -p0
 
 %build
