@@ -1,0 +1,19 @@
+--- src/SConscript.link	2010-12-05 04:39:26.000000000 +0000
++++ src/SConscript	2010-12-05 04:43:07.000000000 +0000
+@@ -2,6 +2,7 @@
+ 
+ import os
+ import site
++import sysconfig
+ from distutils.sysconfig import get_python_inc, get_python_lib
+ import SCons.Util
+ 
+@@ -23,7 +24,7 @@
+ # On some systems, boost_python is actually called boost_python-mt.
+ # Use the BOOSTLIB argument to override the default value.
+ # See https://bugs.launchpad.net/pyexiv2/+bug/523858.
+-libs = [ARGUMENTS.get('BOOSTLIB', 'boost_python'), 'exiv2']
++libs = [ARGUMENTS.get('BOOSTLIB', 'boost_python'), 'exiv2', 'python'+sysconfig.get_config_var('VERSION')]
+ env.Append(LIBS=libs)
+ 
+ # Build shared library libpyexiv2
