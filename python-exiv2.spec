@@ -1,10 +1,10 @@
 Name:		python-exiv2
-Version:	0.3.0
-Release:	5
+Version:	0.3.2
+Release:	1
 Summary:	Python binding to exiv2
 License:	GPLv2+
 Group:		Development/Python
-Source:		http://tilloy.net/dev/pyexiv2/releases/pyexiv2-%{version}.tar.bz2
+Source:		http://launchpad.net/pyexiv2/0.3.x/0.3.2/+download/pyexiv2-%{version}.tar.bz2
 Patch3:		pyexiv2-0.2.2-link.patch
 URL:		http://tilloy.net/dev/pyexiv2/
 BuildRequires:	pkgconfig(exiv2)
@@ -39,4 +39,5 @@ image metadata.
 %install
 %setup_compile_flags
 %scons_install
+
 
