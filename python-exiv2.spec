@@ -1,6 +1,6 @@
 Name:		python-exiv2
 Version:	0.3.2
-Release:	1
+Release:	2
 Summary:	Python binding to exiv2
 License:	GPLv2+
 Group:		Development/Python
