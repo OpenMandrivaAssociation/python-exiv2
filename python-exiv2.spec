@@ -26,7 +26,7 @@ image metadata.
 
 %files
 %doc todo README
-%{py_platsitedir}/*
+%{py2_platsitedir}/*
 
 %prep
 %setup -q -n pyexiv2-%{version}
