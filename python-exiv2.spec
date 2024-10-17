@@ -6,7 +6,7 @@ License:	GPLv2+
 Group:		Development/Python
 Source:		http://launchpad.net/pyexiv2/0.3.x/0.3.2/+download/pyexiv2-%{version}.tar.bz2
 Patch3:		pyexiv2-0.2.2-link.patch
-URL:		http://tilloy.net/dev/pyexiv2/
+URL:		https://tilloy.net/dev/pyexiv2/
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	boost-devel
 BuildRequires:	scons
